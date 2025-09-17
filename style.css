@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: "Ubuntu", sans-serif;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("images/hd-black-cat-rqpue91wz43epj50.jpg");
+    background-size: cover;
+    background-position: top;
+
+}
+
+.navdiv {
+    background-color: rgb(2, 24, 29);
+    height: 7vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+
+.navdiv input {
+    visibility: hidden;
+}
+
+.navdiv label {
+    color: white;
+    font-size: 30px;
+}
+
+#listdiv {
+    height: 100vh;
+    width: 25%;
+    background: linear-gradient(rgb(30, 30, 30) 60%, rgb(57, 57, 57) 100%);
+    /* background-color: red; */
+    position: absolute;
+    margin-left: -500px;
+    margin-top: 93vh;
+    padding: 10px;
+    transition: ease-out 0.5s;
+}
+
+#check:checked~#listdiv {
+    margin-left: 0px;
+    transition: ease-in 0.5s;
+}
+
+#hr {
+    height: 1px;
+    width: 100%;
+    background-color: gray;
+    border: none;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+#checknav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#checknav h1 {
+    color: white;
+}
+
+.chk:hover {
+    transform: scale(1.2);
+    transition: ease-in 0.2s;
+}
+
+#ul {
+    list-style-type: none;
+    padding-top: 3vh;
+}
+
+#ul li {
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 2vh;
+    font-weight: 400;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 10px;
+    transition: ease-out 0.2s;
+}
+
+#ul li:hover {
+    transition: ease-in 0.2s;
+    padding-left: 2vw;
+    background-color: rgb(61, 61, 61);
+}
+
+#ul li:hover::after {
+    font: var(--fa-font-solid);
+    content: "\f08e";
+}
+
+#sdiv {
+    text-align: end;
+}
+
+#sdiv i {
+    font-size: 35px;
+    color: gray;
+}
+
+#sdiv i:hover {
+    color: white;
+    transform: scale(1.2);
+    transition: ease-in 0.2s;
+}
+
+@media (max-width:620px) {
+
+    #listdiv {
+        height: 100vh;
+        width: 70%;
+    }
+
+    #sdiv i {
+        font-size: 25px;
+    }
+
+    #ul li {
+
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    #checknav h1 {
+        font-size: 25px;
+    }
+}
